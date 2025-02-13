@@ -11,13 +11,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Amiri', serif;
 }
 
 body {
-    font-family: 'Amiri', serif;
     line-height: 1.8;
     color: var(--text-color);
     background-color: var(--white);
+    direction: rtl;
 }
 
 /* Navigation */
@@ -44,11 +45,15 @@ nav a {
     color: var(--white);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    color: var(--off-white);
+    background-color: var(--gold-dark);
+    color: var(--white);
 }
 
 /* Hero Section */
@@ -61,13 +66,13 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     max-width: 800px;
     margin: 0 auto;
     animation: fadeInUp 1s ease;
@@ -82,33 +87,42 @@ nav a:hover {
 
 .quran-card {
     background: var(--off-white);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     animation: fadeIn 1s ease;
 }
 
 .quran-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--gold-dark);
     text-align: center;
     margin-bottom: 1.5rem;
     line-height: 2;
-    padding: 1rem;
+    padding: 1.5rem;
     border-bottom: 2px solid var(--gold-light);
 }
 
 .quran-text i {
     color: var(--gold);
     margin: 0 0.5rem;
+    font-size: 1.5rem;
 }
 
 .explanation {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: justify;
-    padding: 1rem;
-    border-right: 3px solid var(--gold);
+    padding: 1.5rem;
+    border-right: 4px solid var(--gold);
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.explanation h2 {
+    color: var(--gold-dark);
+    margin-bottom: 1rem;
 }
 
 /* Topics Grid */
@@ -121,27 +135,31 @@ nav a:hover {
 
 .topic-card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 1s ease;
 }
 
 .topic-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .topic-card i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--gold);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
 }
 
 .topic-card h3 {
     color: var(--gold-dark);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .topic-card ul {
@@ -149,9 +167,10 @@ nav a:hover {
 }
 
 .topic-card ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     padding-right: 1.5rem;
     position: relative;
+    font-size: 1.1rem;
 }
 
 .topic-card ul li::before {
@@ -159,27 +178,30 @@ nav a:hover {
     color: var(--gold);
     position: absolute;
     right: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* Hadith Card */
 .hadith-card {
     background: linear-gradient(to right, var(--gold-light), var(--off-white));
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 2rem 0;
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 3rem 0;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .hadith-text {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--gold-dark);
     margin-bottom: 1rem;
+    line-height: 1.8;
 }
 
 .hadith-source {
     color: var(--text-color);
     font-style: italic;
+    font-size: 1.1rem;
 }
 
 /* Footer */
@@ -187,15 +209,20 @@ footer {
     background-color: var(--gold);
     color: var(--white);
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
+    padding: 2.5rem;
+    margin-top: 4rem;
 }
 
 .footer-credits {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+}
+
+.footer-credits p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
 }
 
 /* Animations */
@@ -207,7 +234,7 @@ footer {
 @keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-30px);
     }
     to {
         opacity: 1;
@@ -218,7 +245,7 @@ footer {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -235,14 +262,22 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
     }
 
     .quran-text {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .topics-grid {
         grid-template-columns: 1fr;
+    }
+
+    .topic-card {
+        margin-bottom: 1rem;
     }
 }
